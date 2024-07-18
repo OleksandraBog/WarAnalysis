@@ -2,3 +2,6 @@
 
 export(analyze_casualties)
 export(plot_conflict_map)
+import(ggplot2)
+import(knitr)
+import(leaflet)

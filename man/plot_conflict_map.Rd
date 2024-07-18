@@ -17,4 +17,5 @@ Plots a map of conflict incidents using OpenStreetMap and leaflet.
 }
 \examples{
 plot_conflict_map(conflict_locations)
+
 }

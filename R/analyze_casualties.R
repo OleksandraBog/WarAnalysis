@@ -8,6 +8,9 @@
 #' @examples result <- analyze_casualties(casualty_data)
 #'   print(result$plot)
 #'
+#' @import ggplot2
+#' @import knitr
+#'
 #' @export
 
 
@@ -20,10 +23,12 @@ analyze_casualties <- function(df, region = NULL) {
 
   # Aggregate total casualties by side
   total_casualties <- aggregate(casualties ~ side, data = df, sum)
+  total_casualties_kable <- knitr::kable(total_casualties, caption = "Total Casualties by Side")
 
   # Aggregate monthly trends by side
   df$month <- format(df$date, "%Y-%m")
   monthly_trends <- aggregate(casualties ~ month + side, data = df, sum)
+  monthly_trends_kable <- knitr::kable(monthly_trends, caption = "Monthly Trends of Casualties by Side")
 
   # Create a line plot of casualties over time by side
   plot <- ggplot(monthly_trends, aes(x = as.Date(paste0(month, "-01")), y = casualties, color = side, group = side)) +
@@ -39,8 +44,8 @@ analyze_casualties <- function(df, region = NULL) {
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
   return(list(
-    total_casualties = total_casualties,
-    monthly_trends = monthly_trends,
+    total_casualties_table = total_casualties_kable,
+    monthly_trends_table = monthly_trends_kable,
     plot = plot
   ))
 }

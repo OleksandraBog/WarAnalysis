@@ -5,6 +5,8 @@
 #' @param df A data frame containing conflict incident data with latitude and longitude columns.
 #' @return A map visualization of conflict incidents.
 #' @examples plot_conflict_map(conflict_locations)
+#'
+#' @import leaflet
 #' @export
 
 
