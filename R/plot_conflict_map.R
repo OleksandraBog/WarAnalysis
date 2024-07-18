@@ -7,6 +7,7 @@
 #' @examples plot_conflict_map(conflict_locations)
 #'
 #' @import leaflet
+#' @import dplyr
 #' @export
 
 

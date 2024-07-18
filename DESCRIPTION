@@ -13,4 +13,5 @@ LazyData: true
 Imports: 
     ggplot2,
     leaflet,
-    knitr
+    knitr,
+    dplyr
