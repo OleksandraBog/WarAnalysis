@@ -1,9 +1,9 @@
 Package: warAnalysis
-Title: Quick basic analysis of data on ongoing russo-Ukrainian war from standartised sources.
+Title: Quick basic analysis of data on ongoing russian-Ukrainian war from standartised sources.
 Version: 0.0.0.9000
 Authors@R: 
     person("Oleksandra", "Bogdanova", , "oleksandrabogd@gmail.com", role = c("aut", "cre"))
-Description: The conflictAnalysis package provides a set of tools for analyzing and visualizing data related to conflicts, particularly focusing on the russo-Ukrainian war. The package includes functions to plot conflict incidents on maps and analyze casualties. It also includes example datasets for demonstration purposes.
+Description: The conflictAnalysis package provides a set of tools for analyzing and visualizing data related to conflicts, particularly focusing on the russian-Ukrainian war. The package includes functions to plot conflict incidents on maps and analyze casualties. It also includes example datasets for demonstration purposes.
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
